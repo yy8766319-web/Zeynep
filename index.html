@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Can ♥️ Zeynep</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+
+        /* 🌌 AŞK + ESTETİK ARKA PLAN */
+        background: url("https://images.unsplash.com/photo-1519681393784-d120267933ba")
+        no-repeat center center fixed;
+        background-size: cover;
+
+        font-family: monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    /* karartma efekti */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.65);
+        z-index: -1;
+    }
+
+    .container {
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 15px #00ff99, 0 0 30px #00ff99;
+        }
+        to {
+            text-shadow: 0 0 50px #00ff99, 0 0 100px #00ff99;
+        }
+    }
+
+    @keyframes titreme {
+        0%   { transform: translate(0,0) rotate(0deg); }
+        10%  { transform: translate(-6px,-6px) rotate(-2deg); }
+        20%  { transform: translate(6px,-6px) rotate(2deg); }
+        30%  { transform: translate(-6px,6px) rotate(-2deg); }
+        40%  { transform: translate(6px,6px) rotate(2deg); }
+        50%  { transform: translate(-8px,4px) rotate(-3deg); }
+        60%  { transform: translate(8px,-4px) rotate(3deg); }
+        70%  { transform: translate(-8px,8px) rotate(-3deg); }
+        80%  { transform: translate(8px,-8px) rotate(3deg); }
+        90%  { transform: translate(-4px,4px) rotate(-2deg); }
+        100% { transform: translate(0,0) rotate(0deg); }
+    }
+
+    .titresin {
+        animation: titreme 0.05s infinite;
+    }
+
+    .rainbow {
+        background: linear-gradient(
+            90deg,
+            red,
+            orange,
+            yellow,
+            green,
+            cyan,
+            blue,
+            violet,
+            red
+        );
+        background-size: 600% 600%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: renk 2.5s linear infinite;
+    }
+
+    @keyframes renk {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+
+    .white {
+        color: white;
+        text-shadow: 0 0 20px white;
+    }
+
+    a {
+        text-decoration: none;
+        display: block;
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: clamp(80px, 12vw, 150px);
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .telegram {
+        font-size: clamp(40px, 6vw, 70px);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1 class="titresin rainbow">Zeynep Dünyalar Güzelim</h1>
+
+    <a href="https://t.me/zorbaAllah" target="_blank">
+        <h1 class="titresin white telegram">Telegram</h1>
+    </a>
+</div>
+
+</body>
+</html>
